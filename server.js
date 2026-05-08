@@ -33,7 +33,7 @@ process.on("uncaughtException", async (err) => {
 process.on("SIGTERM", async () => {
   console.log("SIGTERM received, shuttiing down gracefully");
   server.close(async () => {
-    await disconnectDB();
+    await disconnectDb();
     process.exit(1);
   });
 });
