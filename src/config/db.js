@@ -20,4 +20,9 @@ const connectDb = async () => {
   }
 };
 
-export default { prisma, connectDb };
+const disconnectDb = async () => {
+  await prisma.$disconnect();
+  console.log("DB disconnected via prisma");
+};
+
+export { prisma, connectDb, disconnectDb };
