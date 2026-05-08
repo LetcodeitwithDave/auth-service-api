@@ -10,6 +10,7 @@ const prisma = new PrismaClient({
   adapter,
 });
 
+// DATABASE CONNECTION
 const connectDb = async () => {
   try {
     await prisma.$connect();
